@@ -1,0 +1,113 @@
+/*
+Version 09.09.22
+Version 10.01.11
+	- added support for vertical tabs
+*/
+
+.TabSetCloseButton {
+	background-image: url(images/close_tab.png);
+	width: 10px;
+	height: 10px;
+}
+
+.TabSetCloseButton:hover {
+	background-image: url(images/close_tab_hover.png);
+}
+
+div.TabSet {
+	background: url(images/tab_border_sides.gif) top right no-repeat;
+}
+
+div.TabSetNav_horizontal {
+	background: url(images/tab_border_sides.gif) top left no-repeat;
+}
+
+div.TabSetNav_horizontal ul {
+	background: url(images/tab_border_bottom.gif) top left repeat;
+}
+
+div.TabSetNav_vertical ul { /* should be the width of the tabs you want */
+	width: 95px;
+}
+
+div.TabSetNav_horizontal ul a,
+div.TabSetNav_vertical ul a {
+	height: 20px;
+	padding: 3px 8px;
+	border: 1px solid #ccc;
+	color: #666;
+	background: #e0e0e0;
+	text-decoration: none;
+	font-weight: bold;
+}
+
+div.TabSetNav_horizontal ul a {
+	border-bottom: 0;
+}
+
+div.TabSetNav_vertical ul a { /* should be the width of the tabs you want */
+	width: 95px;
+}
+
+/* Hack for IE's different handling of margin/padding */
+*:first-child+html div.TabSetNav_horizontal ul a {
+	border-bottom: 1px solid #ccc;
+}
+* html div.TabSetNav_horizontal ul a {
+	border-bottom: 1px solid #ccc;
+}
+
+div.TabSetNav_horizontal ul a:hover, 
+div.TabSetNav_vertical ul a:hover {
+	background: #ebebeb;
+}
+
+div.TabSetNav_horizontal ul a.active,
+div.TabSetNav_vertical ul a.active {
+	background-color: #ebebeb;
+	color: #69c;
+}
+
+div.TabSetNav_horizontal ul a.active {
+	padding-bottom: 4px;
+}
+
+div.TabSetNav_vertical ul a.active {
+	padding-right: 9px;
+}
+
+/* Hack for IE's different handling of margin/padding */
+*:first-child+html div.TabSetNav_horizontal ul a.active {
+	height: 20px;
+	border-bottom: none;
+}
+* html div.TabSetNav_horizontal ul a.active {
+	height: 20px;
+	border-bottom: none;
+}
+
+div.TabSetNav_horizontal ul a span,
+div.TabSetNav_vertical ul a span {
+	top: 3px;
+	left: -1px;
+}
+
+.TabSetIcon,
+.TabSetThrobber {
+	width: 16px;
+	height: 16px;
+}
+
+.TabSetThrobber {
+	background-image: url(images/throbber.gif);
+}
+
+.TabSetContent_horizontal,
+.TabSetContent_vertical {
+	border-color: #ccc;
+	background-color: #ebebeb;
+}
+
+.TabSetContent_vertical {
+	margin-left: 112px; /* let's say this is 17px larger than the size of the tabs you want */
+}

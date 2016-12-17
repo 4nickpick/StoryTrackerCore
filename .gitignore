@@ -1,0 +1,9 @@
+.idea*
+uploads*
+private/_backups/*
+error_log
+.ftpquota
+_notes*
+
+www/js/jssor-slideshow/*
+private/_global/libs/htmlpurifier-4.6.0/*

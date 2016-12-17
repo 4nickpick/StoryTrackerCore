@@ -1,0 +1,3 @@
+User-agent: *
+Disallow: /tabmin
+Disallow: /show-picture.php

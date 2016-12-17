@@ -1,0 +1,1458 @@
+/*
+Version 09.12.18
+Version 10.03.31
+	- Added "Inline Editing Forms" section
+Version 10.05.14
+	- Added white-space:nowrap to info_table th's
+*/
+
+/* -----------------------------------------------
+	Forms
+----------------------------------------------- */
+
+form.tabmin_form {
+	width: auto;
+    position: relative;
+    z-index: 0;
+}
+
+form.tabmin_form input[type=text], 
+form.tabmin_form input[type=password] {
+	width: 300px;
+}
+
+form.tabmin_form select {
+	min-width: 150px;
+}
+
+form.tabmin_form textarea {
+	width: 250px;
+	height: 120px;
+}
+
+form .checkbox_multi_select {
+	width: 400px;
+	height: 120px;
+	padding: 3px 0 0 3px;
+	background-color: #fff;
+	border: 1px solid #c0c0c0;
+	border-top: 2px inset #808080;
+	border-left: 2px inset #808080;
+	overflow: auto;
+	overflow-x: hidden;
+}
+
+form .checkbox_multi_select label {
+	width: 100%;
+	height: 20px;
+	float: left;
+}
+
+form .checkbox_multi_select label.checked {
+	background-color: #ccc;
+}
+
+form .checkbox_multi_select input[type=checkbox] {
+	float: left;
+}
+
+form.tabmin_form input.button {
+	position: fixed;
+	padding: 5px;
+}
+
+form.tabmin_form #form_section_buttons {
+    position: fixed;
+    bottom: 50px;
+    right: 0;
+    border: 1px solid black;
+    border-right: none;
+    padding: 3px;
+    padding-right: 75px;
+    background-color: white;
+
+    -moz-box-shadow:    1px 1px 2px 3px #ccc;
+    -webkit-box-shadow: 1px 1px 2px 3px #ccc;
+    box-shadow:         1px 1px 2px 3px #ccc;
+}
+
+form.tabmin_form #form_section_buttons #throbber_wrapper {
+    width: 50px;
+}
+
+form.tabmin_form #form_section_buttons #throbber_wrapper div {
+    text-align: center;
+}
+
+form.tabmin_form input.button.save,
+form.tabmin_form input.button.view,
+form.tabmin_form input.button.cancel {
+    position: relative;
+    margin-right: 10px;
+}
+
+/*
+
+form.tabmin_form input.button.save {
+	right: 185px;
+	bottom: 50px;
+}
+
+form.tabmin_form input.button.view {
+	right: 122px;
+	bottom: 50px;
+}
+
+form.tabmin_form input.button.cancel {
+	right: 50px;
+	bottom: 50px;
+}
+*/
+
+/* -----------------------------------------------
+	Inline Editing Forms
+----------------------------------------------- */
+
+form.inline_edit {
+	
+}
+
+form.inline_edit.display_mode input,
+form.inline_edit.display_mode select,
+form.inline_edit.display_mode textarea,
+form.inline_edit.display_mode label {
+	display: none;
+}
+
+form.inline_edit.edit_mode .editable {
+	display: none;
+}
+
+/* -----------------------------------------------
+	Action Buttons
+----------------------------------------------- */
+
+.action_button {
+	width: 16px;
+	height: 16px;
+	margin: 2px 2px;
+	padding: 0;
+	float: left;
+}
+
+.action_button * {
+	margin: 0;
+	padding: 0;
+	display: inline;
+}
+
+.action_button img {
+	border: none;
+}
+
+/* -----------------------------------------------
+	Location Suggestions
+----------------------------------------------- */
+
+.tabmin_suggest {
+	position: absolute;
+}
+
+.tabmin_suggest select {
+	width: 400px !important;
+	position: absolute;
+	z-index:100; 
+	/*background-color: #bbd6f4;*/
+	border: 1px black solid;
+}
+
+.tabmin_suggest option {
+	padding-top: 5px;
+	overflow: hidden;
+	display: block;
+	width: 100%;
+	height: 20px;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+ul.grid{
+	list-style:none;
+	width: 100%;
+}
+
+ul.grid li{
+	width: 700px;
+	background-color: #CCCCCC;
+	margin-bottom: 3px;
+	padding: 10px;
+	float: left;
+	clear:both;
+}
+
+ul.grid li .image {
+	width: 146px;
+	float: left;
+}
+
+ul.grid li .caption{
+	float: left;
+	width: 500px;
+}
+
+ul.grid li .buttons, ul.grid li .image_buttons {
+	float: left;
+	clear: both;
+}
+
+ul.grid li .image_buttons {
+	margin-right: 10px
+}
+
+/* -----------------------------------------------
+    Form Tables
+------------------------------------------------ */
+
+.form_table {
+    width: 100%;
+    border: 1px solid black;
+    padding: 4px;
+    background-color: #fff;
+}
+
+#form_navigation {
+    margin: 3px;
+    padding: 0;
+
+    margin-top: 15px;
+}
+
+#form_navigation li {
+    display:inline;
+}
+
+#form_navigation li a {
+    border: 1px solid black;
+    margin: 7px;
+    text-decoration: none;
+    padding: 0.25em 1em;
+    color: #000;
+    background-color: #fff;
+
+    position: relative;
+    z-index: 0;
+}
+
+#form_navigation li:hover a {
+    background-color: #efefef;
+
+}
+
+#form_navigation li.current:hover a {
+    background-color: #fff;
+
+}
+
+#form_navigation li.current a {
+    display:inline;
+    border-bottom: 1px solid white;
+    z-index: 10;
+}
+/* -----------------------------------------------
+	Info Tables
+----------------------------------------------- */
+
+.info_table {
+    width: 100%;
+}
+
+.info_table th {
+	white-space: nowrap;
+}
+
+.info_table th,
+.info_table td {
+	padding: 2px 5px;
+	vertical-align: top;
+}
+
+
+.info_table tr.dark {
+	background-color: #ccc;
+}
+
+.info_table tr.light {
+	background-color: #ddd;
+}
+
+.info_table tbody tr:hover {
+	background-color: #aac;
+}
+
+.info_table_header {
+	text-align: left;
+}
+
+.info_table tr.spacer div {
+    margin-bottom: 65px;
+}
+
+.info_table tr.spacer:hover {
+    background-color: transparent;
+}
+
+
+/* -----------------------------------------------
+	Tooltips
+----------------------------------------------- */
+
+.tool {
+	position: relative;   /* this is key */
+}
+ 
+.tool span.tip {
+	display: none;        /* so is this */
+}
+
+/* tooltip will display on :hover event */
+ 
+.tool:hover span.tip,  /* For everyone but You-Know-Who */
+.tool span.tip_hover { /* For IE6 */
+	display: block;
+	z-index: 100;
+	position: absolute;
+	top: -3px;
+	right: 20px;
+	width: auto;
+	padding: 3px 7px 4px 6px;
+	border: 1px solid #333;
+	background-color: #f7f4ed;
+	font: normal 10px arial, helvetica, sans-serif;
+	text-align: left;
+	color: #000;
+	text-decoration: none;
+	white-space: nowrap;
+}
+
+span.tip:hover {
+	display: none !important;
+}
+
+/* Profile Menu */
+
+.profile-menu {
+    display: none;
+    background-color: white;
+    color: black;
+    width: 100px;
+    margin: 0 auto;
+}
+
+.profile-menu ul {
+    list-style-type: none;
+
+}
+
+.profile-menu ul li {
+    padding: 2px 5px;
+    margin: 0;
+    border-bottom: 1px solid black;
+    float:none;
+}
+
+.profile-menu ul li span {
+    font-size: 11px !important;
+}
+
+.profile-menu ul li span.delete {
+    color: red;
+}
+
+.profile-menu ul li:hover {
+    background-color: #78522F;
+    color: white;
+    cursor: pointer;
+}
+
+.profile-menu div {
+    padding: 4px;
+}
+
+.profile-menu img {
+    margin: -4px 10px;
+}
+
+
+/* -----------------------------------------------
+	List Tables
+----------------------------------------------- */
+
+/* -----------------------------------------------
+	Model Tables
+----------------------------------------------- */
+
+.model_table {
+	width: 100%;
+}
+
+.model_table tr th.group_name {
+	font-weight: bold;
+	width: 45%;
+	text-align: left;
+}
+
+.model_table tr th.group_name .drag_icon img {
+	height: 22px;
+}
+
+.model_table tr th.group_name .view {
+	vertical-align: top;
+	font-size: 18px;
+}
+
+.model_table tr th.group_name .edit {
+	display: none;
+}
+
+.model_table tr th.group_name .edit  input[type="text"]{
+	width: 300px;
+}
+
+.model_table tr td.field_name {
+	width: 92%;
+}
+
+.model_table tr td.field_name .drag_icon{
+	margin-left: 30px;
+}
+
+.model_table tr td.field_name .drag_icon img{
+	height: 14px;
+}
+
+.model_table tr td.field_name .edit {
+	display: none;
+}
+
+.model_table tr td.field_name .edit  form {
+	display:inline;
+}
+
+.model_table tr td.field_name .edit  input[type="text"]{
+	width: 300px;
+}
+
+.model_table table.sortable_field {
+	width: 100%;
+}
+
+.model_table table.sortable_field tr:hover td {
+	background-color: #BBB;
+}
+
+.model_table table.sortable_field  form.group_edit{
+	display:inline;
+	vertical-align: top;
+}
+
+.model_table table.sortable_field form.group_edit input {
+	font-size: 20px;
+}
+
+/* -----------------------------------------------
+	View Page
+----------------------------------------------- */
+
+.view_table {
+	width: 42%;
+	float:right;
+	border-collapse: collapse;
+	line-height: 1.5;
+    margin: 10px 20px;
+}
+
+.view_table tr{
+	border: 1px solid black;
+    background-color: white;
+}
+
+.view_table tr th,
+.view_table tr td {
+	padding: 4px;
+}
+
+.view_table tr th.label {
+	width: 40%;
+}
+
+.view_table tr th.label,
+.view_table tr td.data {
+	padding: 2px 5px;
+	vertical-align: center;
+	text-align: left;
+}
+
+.view_table tr#header {
+	background-color: #CCC;
+}
+
+.view_table tr#header form {
+	display: inline;
+}
+
+.view_table tr#header th{
+	text-align: center;
+    border-right: 1px solid black;
+}
+
+.view_table tr#header th div {
+    position: relative;
+}
+
+.view_table tr#header th div div.actions {
+    position: absolute;
+    right: 7px;
+    top: 7px;
+
+    width: 100px;
+}
+
+.view_table tr#header th span{
+	font-weight: bold;
+    font-size: 18px;
+	text-align: center;
+}
+
+.view_table tr.subheader {
+	font-weight: bold;
+	text-align: left;
+	background-color: #EEE;
+}
+
+.view_table tr.subheader th{
+	font-weight: bold;
+	text-align: left;
+	background-color: #EEE;
+    text-align: center;
+    font-size: 17px;
+}
+
+.view_table tr.subheader th span{
+	font-size: 16px;
+}
+
+.view_table tr#image {
+	background-color: #333;
+	text-align: center;
+	height: 50px;
+}
+
+.view_table tr#image td *{
+	vertical-align: middle;
+}
+
+.view_table tr#image td div{
+	position: relative;
+}
+
+.view_table tr#image td img{
+	z-index: -1;
+}
+
+.view_table tr#image td div span{
+	height: 100%;
+	width: 46%;
+	position: absolute;
+	z-index: 10;
+}
+
+.view_table tr#image td div span.next{
+	right: 0;
+}
+
+.view_table tr#image td div span.prev{
+	left: 0;
+}
+
+.view_table tr#image td div span a{
+	color: white;
+	font-size: 58px;
+	text-decoration: none;
+	display: none;
+	height: 100%;
+	line-height: 180px;
+	vertical-align: middle;
+    background: rgb(25, 25, 25);
+    background: rgba(25, 25, 25, .5);
+}
+
+.view_table tr#image td div span:hover a{
+	display: block;
+}
+
+#view h1 {
+    border-bottom: 1px solid black;
+    overflow:hidden;
+}
+
+#view div.photo-slider {
+    height: 180px;
+}
+
+#view div.photo-slider.photo-slider-large {
+    height: 250px;
+}
+
+
+#view div.photo-slider .inactive-slide {
+    display: none;
+}
+
+/* Edit Table */
+
+.edit_table {
+    width: 100%;
+    float:right;
+    border-collapse: collapse;
+    line-height: 1.5;
+    margin: 10px 20px;
+}
+
+.edit_table tr{
+    border: 1px solid black;
+    text-align: center;
+}
+
+.edit_table tr td {
+    background-color: #AE9E7B;
+    border: 1px solid black;
+}
+
+.edit_table tr td a{
+    padding: 0 5px;
+    display:block;
+    text-decoration: none;
+    color: black;
+    height: 100%;
+}
+
+.edit_table tr td a img{
+    vertical-align: middle;
+    margin-right: 4px;
+}
+
+.edit_table tr td a:hover{
+    background-color:#78522F;
+    color: white;
+}
+
+
+/* tinymce edit content form */
+.content {
+	height: 350px;	/* may need to be changed in tinymce-init.js */
+}
+
+/* Dialogs */
+.hidden-dialog {
+    display:none;
+}
+
+.transparent-dialog {
+    filter:alpha(opacity=60); /* for IE4 - IE7 */
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)"; /* IE8 */
+    -moz-opacity:0.60;
+    -khtml-opacity: 0.60;
+    opacity: 0.60;
+}
+
+.transparent-dialog.focus {
+    filter:alpha(opacity=100); /* for IE4 - IE7 */
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)"; /* IE8 */
+    -moz-opacity:1;
+    -khtml-opacity: 1;
+    opacity: 1;
+}
+
+
+/* -----------------------------------------------
+	Relationship Charts
+----------------------------------------------- */
+
+.relationship_chart {
+    height: 80%;
+}
+#relationship_chart_selector {
+    margin: 0 auto;
+    width: 50%;
+    border: 1px solid black;
+    padding: 6px;
+    background-color: white;
+
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px; /* future proofing */
+    -khtml-border-radius: 3px; /* for old Konqueror browsers */
+
+    position: relative;
+
+    cursor:pointer;
+}
+
+#relationship_chart_selector img.select_arrow{
+    float:right;
+    margin: -3px 0 2px 0;
+}
+
+#relationship_chart_selector span{
+    color: black;
+    text-decoration: none;
+    padding: 2px;
+}
+
+#relationships-list {
+    display:none;
+    border: 1px solid black;
+    -moz-box-shadow:    3px 3px 5px 6px #ccc;
+    -webkit-box-shadow: 3px 3px 5px 6px #ccc;
+    box-shadow:         3px 3px 5px 6px #ccc;
+
+    position: absolute;
+
+    width: 150%;
+    left: -25%;
+    margin: 0 auto;
+
+    padding: 4px;
+
+    background-color: white;
+
+    z-index:999;
+
+    cursor:default;
+}
+
+#relationships-list .list_table tr td.chart_name .edit {
+     display: none;
+}
+
+#relationships-list .list_table tr td.chart_name .edit form {
+    display:inline;
+}
+
+#relationships-list .list_table tr td.chart_name .edit  input[type="text"]{
+    width: 300px;
+}
+
+#relationships-list .list_table table.sortable_field {
+    width: 100%;
+}
+
+#relationships-list .list_table table.sortable_field tr:hover td {
+    background-color: #BBB;
+}
+
+#relationships-list .list_table table.sortable_field  form.group_edit{
+    display:inline;
+    vertical-align: top;
+}
+
+#relationships-list .list_table table.sortable_field form.group_edit input {
+    font-size: 20px;
+}
+
+
+#relationships-content {
+    height: 100%;
+}
+
+#relationships-content #chart_menu {
+    text-align: right;
+}
+
+
+#relationships-content #main {
+    height: 110%;
+    border: 1px solid black;
+    background: #EAEDEF;
+    margin-top: 5px;
+
+    -moz-box-shadow:    1px 1px 2px 3px #ccc;
+    -webkit-box-shadow: 1px 1px 2px 3px #ccc;
+    box-shadow:         1px 1px 2px 3px #ccc;
+}
+
+.quick-form{
+    max-height: 450px;
+    overflow-y: scroll;
+}
+
+.quick-form fieldset {
+    padding: 5px;
+}
+
+.quick-form form label{
+    width: 60%;
+    display: inline-block;
+}
+
+.quick-form form input[type="checkbox"]{
+    display:none;
+}
+
+.quick-form form a{
+    display:inline-block;
+    width: 20%;
+    text-align: center;
+    -webkit-border-radius: 2px;
+    -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
+    -webkit-user-select: none;
+    background: -webkit-linear-gradient(#fafafa, #f4f4f4 40%, #e5e5e5);
+    border: 1px solid #aaa;
+    color: #444;
+    font-size: inherit;
+    margin-bottom: 0px;
+    min-width: 4em;
+    padding: 3px 12px 3px 12px;
+    font-family: sans-serif;
+
+    text-decoration: none;
+    border-radius: 0.2em;
+    transition: color 0.15s ease-in 0s;
+}
+
+.quick-form form a:hover {
+    -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.2);
+    background: #ebebeb -webkit-linear-gradient(#fefefe, #f8f8f8 40%, #e9e9e9);
+    border-color: #999;
+    color: #222;
+}
+
+.quick-form form a:active {
+    -webkit-box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.2);;
+    background: #ebebeb -webkit-linear-gradient(#f4f4f4, #efefef 40%, #dcdcdc);
+    color: #333;
+}
+
+.quick-form form a.add{
+    color: green;
+}
+
+.quick-form form a.add-new{
+    width: 28%;
+    margin-right: 8px;
+    color: green;
+}
+
+.quick-form form a.add-new.label{
+    -webkit-box-shadow: none;
+    box-shadow:none;
+    width: 28%;
+    margin-right: 8px;
+    color: black;
+
+    cursor: default;
+
+}
+
+.quick-form form a.cancel{
+    color: gray;
+}
+
+.quick-form form label{
+    padding: 3px 12px 3px 12px;
+}
+
+.quick-form form input{
+    width: 45%;
+    padding: 3px 12px 3px 12px;
+    margin-right: 8px;
+}
+
+.quick-form form label.selected{
+    color: black !important;
+    background-color: rgba(127, 240, 0, .2);
+}
+
+#edit-connection textarea {
+    width: 100%;
+    height: 275px;
+}
+
+.delete-link
+{
+    float: right;
+    font-size: 10px;
+    color: red !important;
+    text-decoration: underline;
+}
+
+.edit-relationship-header,
+.edit-node-header {
+    width: 100%;
+    text-align: center;
+    color: black !important;
+}
+
+.select-relationship-type select{
+    width: 100%;
+    text-align: center;
+}
+
+.aLabel {
+    width: 14px;
+    height: 14px;
+}
+
+.aLabel:hover {
+    background-color:#78A7C6;
+    color:white;
+    opacity: 1;
+}
+
+.aLabel._jsPlumb_hover, ._jsPlumb_source_hover, ._jsPlumb_target_hover {
+    background-color:#78A7C6;
+    color:white;
+}
+
+.romanticLabel {
+    background-image: url('/tabmin/icons/heart.png');
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.sadLabel {
+    background-image: url('/tabmin/icons/sad.png');
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.happyLabel {
+    background-image: url('/tabmin/icons/happy.png');
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* -----------------------------------------------
+	Story Table
+----------------------------------------------- */
+
+.story_table {
+    width: 92%;
+    float: left;
+    border-collapse: collapse;
+    line-height: 1.5;
+    margin: 10px 20px;
+}
+
+.story_table tr{
+    border: 1px solid black;
+}
+
+.story_table tr th,
+.story_table tr td {
+    padding: 4px;
+}
+
+.story_table tr th.label {
+    width: 40%;
+}
+
+.story_table tr th.label,
+.story_table tr td.data {
+    padding: 2px 5px;
+    vertical-align: center;
+    text-align: left;
+}
+
+.story_table tr#header {
+    background-color: #CCC;
+}
+
+.story_table tr#header form {
+    display: inline;
+}
+
+
+.story_table tr#header th{
+    text-align: center;
+    border-right: 1px solid black;
+}
+
+.story_table tr#header th div {
+    position: relative;
+}
+
+.story_table tr#header th div div.actions {
+    position: absolute;
+    right: 0;
+    top: 4px;
+
+    width: 120px;
+}
+.story_table tr#header th span{
+    font-weight: bold;
+    font-size: 16px;
+    text-align: center;
+}
+
+.story_table tr.subheader {
+    font-weight: bold;
+    text-align: left;
+    background-color: #EEE;
+}
+
+.story_table tr.subheader th{
+    font-weight: bold;
+    text-align: left;
+    background-color: #EEE;
+}
+
+.story_table tr.subheader th span{
+    font-size: 16px;
+}
+
+.story_table tr#image {
+    background-color: #333;
+    text-align: center;
+    height: 50px;
+}
+
+.story_table tr#image td *{
+    vertical-align: middle;
+}
+
+.story_table tr#image td div{
+    position: relative;
+}
+
+.story_table tr#image td img{
+    z-index: -1;
+    height: 250px;
+}
+
+.story_table tr#image td div span{
+    height: 100%;
+    width: 46%;
+    position: absolute;
+    z-index: 10;
+}
+
+.story_table tr#image td div span.next{
+    right: 0;
+}
+
+.story_table tr#image td div span.prev{
+    left: 0;
+}
+
+.story_table tr#image td div span a{
+    color: white;
+    font-size: 58px;
+    text-decoration: none;
+    display: none;
+    height: 100%;
+    line-height: 240px;
+    vertical-align: middle;
+    background: rgb(25, 25, 25);
+    background: rgba(25, 25, 25, .5);
+}
+
+.story_table tr#image td div span:hover a{
+    display: block;
+}
+
+.story_view {
+    width: 55%;
+    float: left;
+    min-width: 350px;
+}
+
+#story_profile_menu {
+    width: 41%;
+    min-width: 350px;
+    float: left;
+    margin: 5px 0;
+}
+
+#story_profile_menu .story_button {
+
+    -moz-box-shadow:    1px 1px 2px 2px #444;
+    -webkit-box-shadow: 1px 1px 2px 2px #444;
+    box-shadow:         1px 1px 2px 2px #444;
+
+    margin: 10px 5px;
+
+    width: 46%;
+    float: left;
+
+    text-align:center;
+    height: 130px;
+    line-height: 130px;
+
+    border: 1px solid #AE9E7B;
+
+}
+
+#story_profile_menu .story_button:hover {
+    cursor: pointer;
+    background-color: #78522F;
+    border: 1px solid #78522F;
+}
+
+#story_profile_menu .story_button a {
+    color: #000;
+    text-decoration: none;
+    display: block;
+    background-color: #AE9E7B;
+}
+
+#story_profile_menu .story_button a:hover {
+    color: #fff;
+    background-color: #78522F;
+}
+
+span.series_name {
+    color: rgba(0, 0, 0, .35);
+}
+
+.story_content {
+    float: left;
+    clear: both;
+}
+
+/* Timelines */
+
+#timeline-content .list_table tr td .edit {
+    display: none;
+}
+
+#timeline-content .list_table tr td .edit form {
+    display:inline;
+}
+
+#timeline-content .list_table tr td .edit  input[type="text"]{
+    width: 300px;
+}
+
+#eventAdd label {
+    text-align: center;
+    font-weight: bold;
+    display: block;
+}
+
+#eventAdd input {
+    display: block;
+    padding: 4px;
+    width: 275px;
+    margin: 0 auto;
+}
+
+/* Tags */
+
+.tag {
+    background-color: #DDD;
+    padding: 3px;
+
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px; /* future proofing */
+    -khtml-border-radius: 3px; /* for old Konqueror browsers */
+
+    margin: 1px 4px;
+}
+
+.tag:hover {
+    background-color: #EEE;
+    cursor: pointer;
+}
+
+.remove-tag {
+    color: darkred;
+    text-decoration:none;
+}
+
+
+/* Photos */
+
+#add_photo_wrapper {
+    position: relative;
+    clear: both;
+    display: inline;
+}
+
+#add_photo_wrapper a {
+    text-align: right;
+}
+
+#add_photo_menu {
+    background-color: white;
+    border: 1px solid black;
+    min-height: 16px;
+    position: absolute;
+    width: 220px;
+    left: 0;
+    display:none;
+
+    z-index: 40;
+}
+
+#add_photo_menu ul {
+    list-style-type: none;
+
+}
+
+#add_photo_menu ul li {
+    padding: 10px 4px;
+    margin: 0;
+}
+
+#add_photo_menu ul li:hover {
+    background-color: #78522F;
+    color: white;
+    cursor: pointer;
+}
+
+#add_photo_menu div {
+    padding: 4px;
+}
+
+#add_photo_menu img {
+    margin: -4px 10px;
+}
+
+#fileupload {
+    display: none;
+}
+
+#progress {
+    border: 1px solid black;
+}
+
+#progress .bar {
+    height: 18px;
+    background: green;
+}
+
+#photo_counter {
+    margin: 10px 0;
+}
+
+#photos {
+    border: 1px solid black;
+    background-color: white;
+    width: 800px;
+    margin: 0 auto;
+}
+
+#filter-search {
+    background-color: #CCC;
+    width: 90%;
+    margin: 5px;
+    padding: 5px;
+    overflow: auto;
+}
+
+#filter-header {
+    text-align: center;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#filter-search-body {
+    background-color: #DDD;
+    overflow: auto;
+    display: none;
+    margin-top: 6px;
+}
+
+#filter-search .filter-search-section {
+    float:left;
+    width: 33%;
+}
+
+#filter-search .filter-search-section div {
+    margin: 0 auto;
+    width: 60%;
+}
+
+#filter-search .filter-footer-section {
+    float:left;
+    width: 50%;
+
+    margin-bottom: 4px;
+    border-bottom: 3px solid #CCC;
+    padding-bottom: 4px;
+    padding-top: 4px;
+}
+
+#filter-search .filter-footer-section div {
+    margin: 0 auto;
+    width: 50%;
+}
+
+
+#filter-icon-close {
+    display: none;
+}
+
+.photo-wrapper {
+    width: 180px;
+    height: 180px;
+
+    border: 1px solid black;
+    float: left;
+    position: relative;
+
+    background-color: #333333;
+
+    margin: 8px;
+}
+
+.photo-wrapper .caption {
+    display: none;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    color: white;
+    z-index: 5;
+    background-color: rgba(0,0,0,.8);
+    text-align: center;
+}
+
+.photo-wrapper .caption div {
+    margin: 3px;
+}
+
+.photo-wrapper img.photo {
+    position: absolute;
+    margin: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    cursor:pointer;
+}
+
+
+.photo-menu-wrapper {
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    min-height: 16px;
+    min-width: 16px;
+    background: none;
+    z-index: 20;
+
+    display: none;
+
+}
+
+.photo-wrapper:hover .photo-menu-wrapper {
+    display: block;
+}
+
+.photo-wrapper:hover .caption {
+    display: block;
+}
+
+.photo-menu-wrapper:hover {
+    display: block;
+}
+
+.photo-menu-button {
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.photo-menu {
+    position: absolute;
+    top: 23px;
+    right: 0;
+    width: 120px;
+    background-color: white;
+
+    display: none;
+}
+
+.photo-menu ul {
+    list-style-type: none;
+
+}
+
+.photo-menu ul li {
+    padding: 2px 5px;
+    margin: 0;
+    border-bottom: 1px solid black;
+}
+
+.photo-menu ul li span {
+    font-size: 11px !important;
+}
+
+.photo-menu ul li span.delete {
+    color: red;
+}
+
+.photo-menu ul li:hover {
+    background-color: #78522F;
+    color: white;
+    cursor: pointer;
+}
+
+.photo-menu div {
+    padding: 4px;
+}
+
+.photo-menu img {
+    margin: -4px 10px;
+}
+
+form.tabmin_form textarea.caption {
+    width: 400px;
+    height: 50px;
+}
+
+.ui-state-highlight {
+}
+
+#photos .ui-state-highlight, #photos .ui-widget-content .ui-state-highlight, #photos .ui-widget-header .ui-state-highlight
+{
+    display: block;
+    float:left;
+
+    border: 1px solid black !important;
+    background: #DDD !important;
+    color: black !important;
+    margin: 8px;
+
+    height: 180px;
+    width: 180px;
+}
+
+#photos .cover_photo {
+    border: 1px solid green;
+}
+
+#photos #cover_photo_icon {
+    background-color: rgba(0,0,0,.6);
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    z-index: 15;
+    width: 24px;
+    height: 24px;
+}
+
+#photos #cover_photo_icon img {
+    width: 20px;
+    height: 20px;
+    margin: 2px;
+}
+
+td.recaptcha {
+    background-color: white;
+}
+
+.social_media {
+    float:right;
+}

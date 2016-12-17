@@ -1,0 +1,152 @@
+/* 
+Version 09.10.16 
+Version 10.01.11
+	- added support for vertical tabs
+Version 10.02.03
+	- added style for close button on vertical tabs (moved it to the left of the tab instead of the right)
+*/
+
+.TabSetNav_vertical .TabSetCloseButton {
+	background-repeat: no-repeat;
+	position: absolute;
+	top: -1px;
+	left: 0;
+	cursor: pointer;
+}
+
+.TabSetNav_horizontal .TabSetCloseButton {
+	background-repeat: no-repeat;
+	position: absolute;
+	top: 0;
+	right: 0;
+	cursor: pointer;
+}
+
+.TabSetCloseButton:hover {
+}
+
+div.TabSet {
+	width: 100%;
+	margin: 0 0 20px 0;
+}
+
+div.TabSetNav_horizontal,
+div.TabSetNav_vertical {
+	margin: 0;
+	float: left;
+	font-size: 13px;
+}
+
+div.TabSetNav_horizontal {
+	width: 100%;
+}
+
+div.TabSetNav_horizontal ul,
+div.TabSetNav_vertical ul {
+	margin: 0;
+	padding: 0;
+	float: left;
+	list-style-type: none;
+}
+
+div.TabSetNav_horizontal ul {
+	width: 100%;
+}
+
+div.TabSetNav_vertical ul {
+	width: 200px;
+}
+
+div.TabSetNav_horizontal ul li,
+div.TabSetNav_vertical ul li {
+	margin: 2px 2px 0 0;
+	padding: 0;
+	float: left;
+	white-space: nowrap;
+}
+
+div.TabSetNav_vertical ul li {
+	margin: 0 0 5px 0;
+	clear: both;
+	width: 100%;
+}
+
+div.TabSetNav_horizontal ul a,
+div.TabSetNav_vertical ul a {
+	float: left;
+	position: relative; /* For position:absolute on closeButton */
+	-moz-outline-style: none;
+	cursor: pointer;
+}
+
+div.TabSetNav_horizontal ul a {
+	margin-bottom: 1px;
+	border-bottom: 0;
+}
+
+div.TabSetNav_vertical ul a {
+	margin-right: 1px;
+	width: 200px;
+}
+
+div.TabSetNav_horizontal ul a.active,
+div.TabSetNav_vertical ul a.active {
+	cursor: default;
+}
+
+div.TabSetNav_horizontal ul a.active {
+	margin-bottom: 0;
+}
+
+div.TabSetNav_vertical ul a.active {
+	margin-right: 0;
+	border-right: 0;
+}
+
+div.TabSetNav_horizontal ul a span,
+div.TabSetNav_vertical ul a span {
+	float: left;
+	position: relative;
+}
+
+.TabSetThrobber,
+.TabSetIcon {
+	margin-right: 5px;
+	float: left;
+	position: relative;
+}
+
+.TabSetIcon img {
+	float: left;
+}
+
+.TabSetThrobber img {
+	visibility: hidden;
+}
+
+.TabSetContent_horizontal,
+.TabSetContent_vertical {
+	border: 1px solid;
+	padding: 7px 6px;
+}
+
+.TabSetContent_horizontal {
+	clear: left;
+	border-top: none;
+}
+
+.TabSetContent_vertical {
+	margin-left: 217px;
+	background-color: #EBEBEB;
+	/*border-left: none;*/
+}
+
+.TabSetContent_horizontal > div,
+.TabSetContent_vertical > div {
+	display: none;
+}
+
+.TabSetContent_horizontal > .active, 
+.TabSetContent_vertical > .active {
+	display: block;
+}

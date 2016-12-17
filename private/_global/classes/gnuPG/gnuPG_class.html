@@ -1,0 +1,678 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos -->
+			<title>Docs For Class gnuPG</title>
+			<meta http-equiv='Content-Type' content='text/html; charset=iso-8859-1'/>
+			<style type="text/css">
+a { color: #000090; text-decoration: none; }
+a:hover, a:active, a:focus { color: highlighttext; background-color: highlight; text-decoration: none; }
+
+body { background: #FFFFFF; }
+body, table { font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 10pt; }
+
+a img { border: 0px; }
+
+/* Page layout/boxes */
+
+.info-box {  }
+.info-box-title { margin: 1em 0em 0em 0em; font-weight: normal; font-size: 14pt; color: #999999; border-bottom: 2px solid #999999; }
+.info-box-body { border: 1px solid #999999; padding: .5em; }
+.nav-bar { font-size: 8pt; white-space: nowrap; text-align: right; padding: .2em; margin: 0em 0em 1em 0em; }
+
+.oddrow { background-color: #F8F8F8; border: 1px solid #AAAAAA; padding: .5em; margin-bottom: 1em}
+.evenrow { border: 1px solid #AAAAAA; padding: .5em; margin-bottom: 1em}
+
+.page-body { max-width: 800px; margin: auto; }
+.tree { white-space: nowrap; font: icon }
+.tree dd { margin-left: 19px }
+.tree dl { margin: 0px }
+.tree-icon { 	vertical-align: middle; border: 0px; margin-right: 3px }
+
+/* Index formatting classes */
+
+.index-item-body { margin-top: .5em; margin-bottom: .5em}
+.index-item-description { margin-top: .25em }
+.index-item-details { font-weight: normal; font-style: italic; font-size: 8pt }
+.index-letter-section { background-color: #EEEEEE; border: 1px dotted #999999; padding: .5em; margin-bottom: 1em}
+.index-letter-title { font-size: 12pt; font-weight: bold }
+.index-letter-menu { text-align: center; margin: 1em }
+.index-letter { font-size: 12pt }
+
+/* Docbook classes */
+
+.description {}
+.short-description { font-weight: bold; color: #666666; }
+.tags {	padding-left: 0em; margin-left: 3em; color: #666666; list-style-type: square; }
+.parameters {	padding-left: 0em; margin-left: 3em; color: #014fbe; list-style-type: square; }
+.redefinitions { font-size: 8pt; padding-left: 0em; margin-left: 2em; }
+.package { font-weight: bold; }
+.package-title { font-weight: bold; font-size: 14pt; border-bottom: 1px solid black }
+.package-details { font-size: 85%; }
+.sub-package { font-weight: bold; }
+.tutorial { border-width: thin; border-color: #0066ff; }
+.tutorial-nav-box { width: 100%; border: 1px solid #999999; background-color: #F8F8F8; }
+.folder-title { font-style: italic; font-family: Verdana, Arial, Helvetica, sans-serif }
+
+/* Generic formatting */
+
+.field { font-weight: bold; }
+.detail { font-size: 8pt; }
+.notes { font-style: italic; font-size: 8pt; }
+.separator { background-color: #999999; height: 2px; }
+.warning {  color: #FF6600; }
+.disabled { font-style: italic; color: #999999; }
+
+/* Code elements */
+
+.line-number {  }
+
+.class-table { width: 100%; }
+.class-table-header { border-bottom: 1px dotted #666666; text-align: left}
+.class-name { color: #0000AA; font-weight: bold; }
+
+.method-summary { color: #009000; padding-left: 1em; font-size: 8pt; }
+.method-header { }
+.method-definition { margin-bottom: .2em }
+.method-title { color: #009000; font-weight: bold; }
+.method-name { font-weight: bold; }
+.method-signature { font-size: 85%; color: #666666; margin: .5em 0em }
+.method-result { font-style: italic; }
+
+.var-summary { padding-left: 1em; font-size: 8pt; }
+.var-header { }
+.var-title { color: #014fbe; margin-bottom: .3em }
+.var-type { font-style: italic; }
+.var-name { font-weight: bold; }
+.var-default {}
+.var-description { font-weight: normal; color: #000000; }
+
+.include-title { color: #014fbe;}
+.include-type { font-style: italic; }
+.include-name { font-weight: bold; }
+
+.const-title { color: #FF6600; }
+.const-name { font-weight: bold; }
+
+/* Syntax highlighting */
+
+.src-code {  }
+
+.src-code a:link { padding: 1px; text-decoration: underline; color: #0000DD; }
+.src-code a:visited { text-decoration: underline; color: #0000DD; }
+.src-code a:active { background-color: #FFFF66; color: #008000; }
+.src-code a:hover { background-color: #FFFF66; text-decoration: overline underline; color: #008000; }
+
+.src-comm { color: #666666; }
+.src-id { color: #FF6600; font-style: italic; }
+.src-inc { color: #0000AA; font-weight: bold; }
+.src-key { color: #0000AA; font-weight: bold; }
+.src-num { color: #CC0000; }
+.src-str { color: #CC0000; }
+.src-sym { }
+.src-var { }
+
+.src-php { font-weight: bold; }
+
+.src-doc { color: #666666; }
+.src-doc-close-template { color: #666666 }
+.src-doc-coretag { color: #008000; }
+.src-doc-inlinetag {}
+.src-doc-internal {}
+.src-doc-tag { color: #0080CC; }
+.src-doc-template { color: #666666 }
+.src-doc-type { font-style: italic; color: #444444 }
+.src-doc-var { color: #444444 }
+
+/* tutorial */
+
+.authors {  }
+.author { font-style: italic; font-weight: bold }
+.author-blurb { margin: .5em 0em .5em 2em; font-size: 85%; font-weight: normal; font-style: normal }
+.example { border: 1px dashed #999999; background-color: #EEEEEE; padding: .5em }
+.listing { border: 1px dashed #999999; background-color: #EEEEEE; padding: .5em; white-space: nowrap }
+.release-info { font-size: 85%; font-style: italic; margin: 1em 0em }
+.ref-title-box {  }
+.ref-title {  }
+.ref-purpose { font-style: italic; color: #666666 }
+.ref-synopsis {  }
+.title { font-weight: bold; border-bottom: 1px solid #999999; color: #999999;  }
+.cmd-synopsis { margin: 1em 0em }
+.cmd-title { font-weight: bold }
+.toc { margin-left: 2em; padding-left: 0em }
+
+			</style>
+		</head>
+		<body>
+			<div class="page-body">			
+<h2 class="class-name">gnuPG</h2>
+
+<a name="sec-description"></a>
+<div class="info-box">
+	<div class="info-box-title">Description</div>
+	<div class="nav-bar">
+					<span class="disabled">Description</span> |
+													<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+						|											<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+						
+			</div>
+	<div class="info-box-body">
+		<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Class to interact with the gnuPG.</p>
+	<ul class="tags">
+				<li><span class="field">version:</span> $Id: gnuPG_class.inc,v 1.0.8 2005-04-24 17:03:00-05 egarcia Exp $</li>
+				<li><span class="field">since:</span> Viernes, Enero 30, 2004</li>
+				<li><span class="field">license:</span> <a href="http://opensource.org/licenses/gpl-license.php">GNU Public License</a></li>
+				<li><span class="field">copyright:</span> Copyright (c) 2004-2005, EGM :: Ingenieria sin fronteras</li>
+				<li><span class="field">author:</span> Enrique Garcia Molina &lt;<a href="mailto:egarcia@egm.as">mailto:egarcia@egm.as</a>&gt;</li>
+			</ul>
+				
+		<pre></pre>
+	
+			</div>
+</div>
+
+
+	<a name="sec-var-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variable Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+						<span class="disabled">Vars</span> (<a href="#sec-vars">details</a>)
+							| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+					</div>
+		<div class="info-box-body">
+			<div class="var-summary">
+								<div class="var-title">
+					
+					<span class="var-type">string</span>
+					<a href="#$error" title="details" class="var-name">$error</a>
+				</div>
+								<div class="var-title">
+					
+					<span class="var-type">string</span>
+					<a href="#$output" title="details" class="var-name">$output</a>
+				</div>
+							</div>
+		</div>
+	</div>
+
+	<a name="sec-method-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Method Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+															<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+				 
+				|
+						<span class="disabled">Methods</span> (<a href="#sec-methods">details</a>)
+		</div>
+		<div class="info-box-body">			
+			<div class="method-summary">
+								
+				<div class="method-definition">
+					
+											<span class="method-result">void</span>
+										<a href="#gnuPG" title="details" class="method-name">gnuPG</a>
+											([<span class="var-type">string</span>&nbsp;<span class="var-name">$program_path</span> = <span class="var-default">false</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$home_directory</span> = <span class="var-default">false</span>])
+									</div>
+								
+				<div class="method-definition">
+					
+											<span class="method-result">mixed</span>
+										<a href="#Decrypt" title="details" class="method-name">Decrypt</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$KeyID</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$Passphrase</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$Text</span>)
+									</div>
+								
+				<div class="method-definition">
+					
+											<span class="method-result">mixed</span>
+										<a href="#DeleteKey" title="details" class="method-name">DeleteKey</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$KeyID</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$KeyKind</span> = <span class="var-default">'public'</span>])
+									</div>
+								
+				<div class="method-definition">
+					
+											<span class="method-result">mixed</span>
+										<a href="#Encrypt" title="details" class="method-name">Encrypt</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$KeyID</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$Passphrase</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$RecipientKeyID</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$Text</span>)
+									</div>
+								
+				<div class="method-definition">
+					
+											<span class="method-result">mixed</span>
+										<a href="#Export" title="details" class="method-name">Export</a>
+											([<span class="var-type">string</span>&nbsp;<span class="var-name">$KeyID</span> = <span class="var-default">false</span>])
+									</div>
+								
+				<div class="method-definition">
+					
+											<span class="method-result">mixed</span>
+										<a href="#GenKey" title="details" class="method-name">GenKey</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$RealName</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$Comment</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$Email</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$Passphrase</span> = <span class="var-default">''</span>], <span class="var-type">string</span>&nbsp;<span class="var-name">$ExpireDate</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$KeyType</span> = <span class="var-default">'DSA'</span>], [<span class="var-type">int</span>&nbsp;<span class="var-name">$KeyLength</span> = <span class="var-default">1024</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$SubkeyType</span> = <span class="var-default">'ELG-E'</span>], [<span class="var-type">int</span>&nbsp;<span class="var-name">$SubkeyLength</span> = <span class="var-default">1024</span>])
+									</div>
+								
+				<div class="method-definition">
+					
+											<span class="method-result">mixed</span>
+										<a href="#Import" title="details" class="method-name">Import</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$KeyBlock</span>)
+									</div>
+								
+				<div class="method-definition">
+					
+											<span class="method-result">mixed</span>
+										<a href="#ListKeys" title="details" class="method-name">ListKeys</a>
+											([<span class="var-type">string</span>&nbsp;<span class="var-name">$KeyKind</span> = <span class="var-default">'public'</span>])
+									</div>
+
+				<div class="method-definition">
+					
+											<span class="method-result">bool</span>
+										<a href="#SignKey" title="details" class="method-name">SignKey</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$KeyID</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$Passphrase</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$KeyIDToSign</span>, [<span class="var-type">int</span>&nbsp;<span class="var-name">$CheckLevel</span> = <span class="var-default">0</span>])
+									</div>
+							</div>
+
+		</div>
+	</div>		
+
+	<a name="sec-vars"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variables</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+										<a href="#sec-var-summary">Vars</a> (<span class="disabled">details</span>)
+						
+			
+							| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+					</div>
+		<div class="info-box-body">
+			<a name="var$error" id="$error"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		
+		<span class="var-title">
+			<span class="var-type">string</span>
+			<span class="var-name">$error</span>
+						(line <span class="line-number">55</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Error and status messages</p>
+	
+	
+		
+		
+
+</div>
+<a name="var$output" id="$output"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		
+		<span class="var-title">
+			<span class="var-type">string</span>
+			<span class="var-name">$output</span>
+						(line <span class="line-number">61</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Output message</p>
+	
+	
+		
+		
+
+</div>
+						
+		</div>
+	</div>
+	
+	<a name="sec-methods"></a>
+	<div class="info-box">
+		<div class="info-box-title">Methods</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+															<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+														<a href="#sec-method-summary">Methods</a> (<span class="disabled">details</span>)
+						
+		</div>
+		<div class="info-box-body">
+			<A NAME='method_detail'></A>
+<a name="methodgnuPG" id="gnuPG"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">Constructor gnuPG</span> (line <span class="line-number">73</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Create the gnuPG object.</p>
+<p class="description"><p>Set the program path for the GNUPG and the home directory of the keyring.  If this parameters are not specified, according to the OS the function derive the values.</p></p>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			gnuPG
+		</span>
+					([<span class="var-type">string</span>&nbsp;<span class="var-name">$program_path</span> = <span class="var-default">false</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$home_directory</span> = <span class="var-default">false</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$program_path</span><span class="var-description">: Full program path for the GNUPG</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$home_directory</span><span class="var-description">: Home directory of the keyring</span>			</li>
+				</ul>
+		
+		
+	</div>
+<a name="methodDecrypt" id="Decrypt"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">Decrypt</span> (line <span class="line-number">375</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Decrypt the data.</p>
+<p class="description"><p>If the decrypted file is signed, the signature is also verified.</p></p>
+	<ul class="tags">
+				<li><span class="field">return:</span> false on error, the clear (decrypted) data on success</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">mixed</span>
+		<span class="method-name">
+			Decrypt
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$KeyID</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$Passphrase</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$Text</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$KeyID</span><span class="var-description">: the key id to decrypt</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$Passphrase</span><span class="var-description">: the passphrase to open the key used to decrypt</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$Text</span><span class="var-description">: data to decrypt</span>			</li>
+				</ul>
+		
+		
+	</div>
+<a name="methodDeleteKey" id="DeleteKey"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">DeleteKey</span> (line <span class="line-number">413</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Remove key from the public keyring.</p>
+<p class="description"><p>If secret is specified it try to remove the key from from the secret  and public keyring.  The returned error codes are: <ol><li>= no such key</li><li>= must delete secret key first</li><li>= ambiguos specification</li></ol></p></p>
+	<ul class="tags">
+				<li><span class="field">return:</span> true on success, otherwise false or the delete error code</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">mixed</span>
+		<span class="method-name">
+			DeleteKey
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$KeyID</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$KeyKind</span> = <span class="var-default">'public'</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$KeyID</span><span class="var-description">: the key id to be removed, if this is the secret key you must specify the fingerprint</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$KeyKind</span><span class="var-description">: the kind of the keys, can be secret or public</span>			</li>
+				</ul>
+		
+		
+	</div>
+<a name="methodEncrypt" id="Encrypt"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">Encrypt</span> (line <span class="line-number">350</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Encrypt and sign data.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> false on error, the encrypted data on success</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">mixed</span>
+		<span class="method-name">
+			Encrypt
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$KeyID</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$Passphrase</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$RecipientKeyID</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$Text</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$KeyID</span><span class="var-description">: the key id used to encrypt</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$Passphrase</span><span class="var-description">: the passphrase to open the key used to encrypt</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$RecipientKeyID</span><span class="var-description">: the recipient key id</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$Text</span><span class="var-description">: data to encrypt</span>			</li>
+				</ul>
+		
+		
+	</div>
+<a name="methodExport" id="Export"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">Export</span> (line <span class="line-number">219</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Export a key.</p>
+<p class="description"><p>Export all keys from all keyrings, or if at least one name is given, those of the given name.</p></p>
+	<ul class="tags">
+				<li><span class="field">return:</span> false on error, the key block with the exported keys</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">mixed</span>
+		<span class="method-name">
+			Export
+		</span>
+					([<span class="var-type">string</span>&nbsp;<span class="var-name">$KeyID</span> = <span class="var-default">false</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$KeyID</span><span class="var-description">: The Key ID to export</span>			</li>
+				</ul>
+		
+		
+	</div>
+<a name="methodGenKey" id="GenKey"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">GenKey</span> (line <span class="line-number">291</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Generate a new key pair.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> false on error, the fingerprint of the created key pair in success</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">mixed</span>
+		<span class="method-name">
+			GenKey
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$RealName</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$Comment</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$Email</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$Passphrase</span> = <span class="var-default">''</span>], <span class="var-type">string</span>&nbsp;<span class="var-name">$ExpireDate</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$KeyType</span> = <span class="var-default">'DSA'</span>], [<span class="var-type">int</span>&nbsp;<span class="var-name">$KeyLength</span> = <span class="var-default">1024</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$SubkeyType</span> = <span class="var-default">'ELG-E'</span>], [<span class="var-type">int</span>&nbsp;<span class="var-name">$SubkeyLength</span> = <span class="var-default">1024</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$RealName</span><span class="var-description">: The real name of the user or key.</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$Comment</span><span class="var-description">: Any explanatory commentary.</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$Email</span><span class="var-description">: The e-mail for the user.</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$Passphrase</span><span class="var-description">: Passphrase for the secret key, default is not to use any passphrase.</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$ExpireDate</span><span class="var-description">: Set the expiration date for the key (and the subkey).  It may either be entered in ISO date format (2000-08-15) or as number of days, weeks, month or years (&lt;number&gt;[d|w|m|y]). Without a letter days are assumed.</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$KeyType</span><span class="var-description">: Set the type of the key, the allowed values are DSA and RSA, default is DSA.</span>			</li>
+					<li>
+				<span class="var-type">int</span>
+				<span class="var-name">$KeyLength</span><span class="var-description">: Length of the key in bits, default is 1024.</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$SubkeyType</span><span class="var-description">: This generates a secondary key, currently only one subkey can be handled ELG-E.</span>			</li>
+					<li>
+				<span class="var-type">int</span>
+				<span class="var-name">$SubkeyLength</span><span class="var-description">: Length of the subkey in bits, default is 1024.</span>			</li>
+				</ul>
+		
+		
+	</div>
+<a name="methodImport" id="Import"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">Import</span> (line <span class="line-number">245</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Import/merge keys.</p>
+<p class="description"><p>This adds the given keys to the keyring. New keys are appended to your  keyring and already existing keys are updated. Note that GnuPG does not  import keys that are not self-signed.</p></p>
+	<ul class="tags">
+				<li><span class="field">return:</span> false on error, the array with [KeyID, UserID] elements of imported keys on success.</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">mixed</span>
+		<span class="method-name">
+			Import
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$KeyBlock</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$KeyBlock</span><span class="var-description">: The PGP block with the key(s).</span>			</li>
+				</ul>
+		
+		
+	</div>
+<a name="methodListKeys" id="ListKeys"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">ListKeys</span> (line <span class="line-number">160</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Get the keys from the KeyRing.</p>
+<p class="description"><p>The returned array get the following elements:  [RecordType, CalculatedTrust, KeyLength, Algorithm,   KeyID, CreationDate, ExpirationDate, LocalID,   Ownertrust, UserID]</p></p>
+	<ul class="tags">
+				<li><span class="field">return:</span> false on error, the array with the keys in the keyring in success</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">mixed</span>
+		<span class="method-name">
+			ListKeys
+		</span>
+					([<span class="var-type">string</span>&nbsp;<span class="var-name">$KeyKind</span> = <span class="var-default">'public'</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$KeyKind</span><span class="var-description">: the kind of the keys, can be secret or public</span>			</li>
+				</ul>
+		
+		
+	</div>
+<a name="methodSignKey" id="SignKey"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">SignKey</span> (line <span class="line-number">456</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Make a signature on key.</p>
+<p class="description"><p>If the key is not yet signed by the specified user.</p></p>
+	<ul class="tags">
+				<li><span class="field">return:</span> true on success, otherwise false</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">bool</span>
+		<span class="method-name">
+			SignKey
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$KeyID</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$Passphrase</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$KeyIDToSign</span>, [<span class="var-type">int</span>&nbsp;<span class="var-name">$CheckLevel</span> = <span class="var-default">0</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$KeyID</span><span class="var-description">: the key id used to sign</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$Passphrase</span><span class="var-description">: the passphrase to open the key used to sign</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$KeyIDToSign</span><span class="var-description">: the key to be signed</span>			</li>
+					<li>
+				<span class="var-type">int</span>
+				<span class="var-name">$CheckLevel</span><span class="var-description">: the check level (0, 1, 2, 3 -casual to extensive-)</span>			</li>
+				</ul>
+		
+		
+	</div>
+						
+		</div>
+	</div>
+	
+	<p class="notes" id="credit">
+		Documentation generated on Sun, 24 Apr 2005 20:13:55 -0500 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.2.3</a>
+	</p>
+	</div></body>
+</html>
