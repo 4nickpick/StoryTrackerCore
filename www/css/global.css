@@ -493,12 +493,12 @@ input#s {
 
 .home-left {
     width: 100%;
-    margin: 10px;
+    margin: 10px 0;
 }
 
 .home-right {
     width: 100%;
-    margin: 10px;
+    margin: 10px 0;
 }
 
 .home-left.with-background {
@@ -514,21 +514,21 @@ input#s {
 .home-right.with-background {
     background-color: rgba(255,255,255,.9);
     padding: 5px;
-    margin: 10px 10px;
+    margin: 10px 0px;
     border: 2px solid rgba(0,128,0,.9);
 }
 
-.home-right.with-background table {
-    width: auto !important;
-}
+/*.home-right.with-background table {*/
+    /*width: auto !important;*/
+/*}*/
 
-.home-right.with-background table textarea{
-    width: 75% !important;
-}
+/*.home-right.with-background table textarea{*/
+    /*width: 75% !important;*/
+/*}*/
 
-.home-right.with-background table input[type="submit"] {
-    width: 75% !important;
-}
+/*.home-right.with-background table input[type="submit"] {*/
+    /*width: 75% !important;*/
+/*}*/
 
 
 form.signup-form {
