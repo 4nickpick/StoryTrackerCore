@@ -1,7 +1,7 @@
 <?php
 global $currentUser;
 
-ini_set('display_errors', true);
+
 require_once($_SERVER['DOCUMENT_ROOT'].'/../private/includes/config.inc.php');
 include INCLUDE_ROOT.'/ajax_secure.inc.php';
 ob_start();
