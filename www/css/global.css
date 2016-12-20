@@ -492,14 +492,12 @@ input#s {
 /* HOME */
 
 .home-left {
-    float: left;
-    width: 58%;
+    width: 100%;
     margin: 10px;
 }
 
 .home-right {
-    float: left;
-    width: 38%;
+    width: 100%;
     margin: 10px;
 }
 
@@ -507,7 +505,6 @@ input#s {
     background-color: rgba(255,255,255,.9);
     padding: 5px;
     margin: 10px 0;
-    width: 52%;
 }
 
 .home-left.with-background table {
@@ -518,7 +515,6 @@ input#s {
     background-color: rgba(255,255,255,.9);
     padding: 5px;
     margin: 10px 10px;
-    width: 42%;
     border: 2px solid rgba(0,128,0,.9);
 }
 
@@ -597,8 +593,8 @@ div.headline {
     color: white;
     background-color: rgba(0,0,0,.7);
     padding: 5px;
-
-    width: 70%;
+    text-align: center;
+    width: 100%;
 }
 
 div.headline h1, div.headline h2, div.headline p {
