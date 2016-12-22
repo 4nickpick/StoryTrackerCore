@@ -313,8 +313,7 @@ hr {
 
 .body {
 	float: left;
-	width: 98%;
-	padding: 1%;
+	width: 100%;
 	
 	/*push content out from behind footer by footer's height*/
 	margin-bottom: 25px;
@@ -518,6 +517,16 @@ input#s {
     border: 2px solid rgba(0,128,0,.9);
 }
 
+.home-right h2, .home-right p, .home-right button {
+    display: block;
+    text-align: center;
+}
+
+.home-right button {
+    margin: 20px auto 0;
+    padding: 20px;
+    font-size: 18px;
+}
 /*.home-right.with-background table {*/
     /*width: auto !important;*/
 /*}*/
@@ -531,40 +540,40 @@ input#s {
 /*}*/
 
 
-form.signup-form {
-    width: 100%;
-}
+/*form.signup-form {*/
+    /*width: 100%;*/
+/*}*/
 
-form.signup-form table {
-    width: 100%;
-}
+/*form.signup-form table {*/
+    /*width: 100%;*/
+/*}*/
 
-form.confirm-login-form input,
-form.contact-form input,
-form.signup-form input {
-    display:block;
-    width: 100%;
-    padding: 10px;
-    margin: 10px;
-    -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
-    -moz-box-sizing: border-box;    /* Firefox, other Gecko */
-    box-sizing: border-box;         /* Opera/IE 8+ */
-}
+/*form.confirm-login-form input,*/
+/*form.contact-form input,*/
+/*form.signup-form input {*/
+    /*display:block;*/
+    /*width: 100%;*/
+    /*padding: 10px;*/
+    /*margin: 10px;*/
+    /*-webkit-box-sizing: border-box; !* Safari/Chrome, other WebKit *!*/
+    /*-moz-box-sizing: border-box;    !* Firefox, other Gecko *!*/
+    /*box-sizing: border-box;         !* Opera/IE 8+ *!*/
+/*}*/
 
-form.contact-form {
-    width: 100%;
-}
+/*form.contact-form {*/
+    /*width: 100%;*/
+/*}*/
 
-form.contact-form table {
-    width: 100%;
-}
+/*form.contact-form table {*/
+    /*width: 100%;*/
+/*}*/
 
-form.contact-form textarea {
-    width: 100%;
-    padding: 10px;
-    margin: 10px;
-    height: 77px;
-}
+/*form.contact-form textarea {*/
+    /*width: 100%;*/
+    /*padding: 10px;*/
+    /*margin: 10px;*/
+    /*height: 77px;*/
+/*}*/
 
 form.confirm-login-form {
     width: 50%;
@@ -595,6 +604,7 @@ div.headline {
     padding: 5px;
     text-align: center;
     width: 100%;
+    margin: 10px 0;
 }
 
 div.headline h1, div.headline h2, div.headline p {
@@ -650,4 +660,38 @@ ul#benefits li.green {
 
 .headshot img {
     border: 1px solid black;
+}
+
+.grecaptcha-badge {
+    display: none;
+}
+
+/* Pure.css additions */
+.pure-button:hover {
+    background-image: linear-gradient(transparent,rgba(0,0,0,.05) 40%,rgba(0,0,0,.1))
+}
+
+.pure-button.button-success,
+.pure-button.button-error,
+.pure-button.button-warning,
+.pure-button.button-secondary {
+    color: white;
+    border-radius: 4px;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+}
+
+.pure-button.button-success {
+    background: rgb(28, 184, 65); /* this is a green */
+}
+
+.pure-button.button-error {
+    background: rgb(202, 60, 60); /* this is a maroon */
+}
+
+.pure-button.button-warning {
+    background: rgb(223, 117, 20); /* this is an orange */
+}
+
+.pure-button.button-secondary {
+    background: rgb(66, 184, 221); /* this is a light blue */
 }
