@@ -47,8 +47,8 @@
                         <input type="text" id="email" name="email" class="pure-u-23-24" placeholder="Your Email*" autocomplete="off"/>
                     </div>
                     <div class="pure-u-1 pure-u-md-1-2">
-                        <label for="last_name">How did you hear about us?</label>
-                        <input type="text" id="referral" name="referral" class="pure-u-23-24" placeholder="How did you hear about us?" autocomplete="off"/>
+                        <label for="last_name">How did you hear about Story Tracker?</label>
+                        <input type="text" id="referral" name="referral" class="pure-u-23-24" placeholder="How did you hear about Story Tracker?" autocomplete="off"/>
                     </div>
                     <div class="pure-u-1 pure-u-md-1-2">
                         <label for="last_name">New Password <strong>*</strong> <small>(10 character minimum)</small></label>
