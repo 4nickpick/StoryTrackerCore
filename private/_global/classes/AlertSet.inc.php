@@ -132,4 +132,3 @@ class AlertSet
 		return $html;
 	}
 }
-?>

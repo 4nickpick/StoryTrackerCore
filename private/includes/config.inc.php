@@ -194,4 +194,3 @@ if (!empty($currentUser)) {
         }
     }
 }
-?>

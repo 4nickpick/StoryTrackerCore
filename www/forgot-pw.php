@@ -120,5 +120,3 @@ else
 
 <?php TemplateSet::display($_SERVER['DOCUMENT_ROOT'].'/template.php'); ?>
 
-
-

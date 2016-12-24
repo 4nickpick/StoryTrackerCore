@@ -3,15 +3,33 @@
     // see beta directory for beta sign-ups, etc
     if( $registrations_open == true )
     {
+        $form_id = randString(4);
         ?>
         <h2>Track Your First Story For Free</h2>
         <p>Get started for free, <strong>no credit card necessary</strong>. </p>
-        <form class="pure-form pure-form-stacked"
+        <form
+              id="signup_form_<?php echo $form_id ?>"
+              class="pure-form pure-form-stacked"
               action="/tabmin/modules/users/ajax.php"
               method="post"
               onsubmit=""
               autocomplete="off"
               enctype="multipart/form-data">
+
+            <script>
+                function submitForm_<?php echo $form_id ?>() {
+                    var form = document.getElementById("signup_form_<?php echo $form_id ?>");
+                    return handleAjaxForm(form,
+                        function(){
+                            goTo('/confirm');
+                        },
+                        function(resp) {
+                            AlertSet.addJSON(resp).show();
+                            grecaptcha.reset();
+                        }
+                    );
+                }
+            </script>
             <fieldset>
                 <input type="hidden" name="verb" value="sign-up" />
                 <?=XSRF::html()?>
@@ -42,17 +60,19 @@
                     </div>
                     <div class="pure-u-1 pure-u-md-1-1">
                         <button
+                            type="submit"
                             class="g-recaptcha pure-button button-success"
+                            data-badge="inline"
                             data-sitekey="<?php echo RECAPTCHA_PUBLIC; ?>"
-                            data-callback="">
+                            data-callback="submitForm_<?php echo $form_id ?>">
                             Get Started For Free &raquo;
                         </button>
                     </div>
                     <div class="pure-u-1 pure-u-md-1-1">
                         <p><small><strong>
-                                    We will never sell your email address or send you spam.
-                                    <a href="/privacy" target="_blank">View our Privacy Policy</a>
-                                </strong></small></p>
+                            We will never sell your email address or send you spam.
+                            <a href="/privacy" target="_blank">View our Privacy Policy</a>
+                        </strong></small></p>
                     </div>
                 </div>
             </fieldset>
@@ -62,7 +82,13 @@
     }
     else
     {
-        echo '<div class="AlertSet_info"><ul><li>Registrations are temporarily closed. Please check back soon.</li></ul></div>';
+        ?>
+        <div class="AlertSet_info">
+            <ul>
+                <li>Registrations are temporarily closed. Please check back soon.</li>
+            </ul>
+        </div>
+        <?php
     }
     ?>
 </div>

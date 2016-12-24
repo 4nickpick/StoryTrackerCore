@@ -58,4 +58,3 @@ class Facebook
 		return json_decode($this->getObject('posts', $limit, $offset, $until, $since));
 	}
 }
-?>

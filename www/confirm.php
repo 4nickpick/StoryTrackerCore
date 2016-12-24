@@ -66,6 +66,3 @@ if( isset($_GET['key']) )
 <?php TemplateSet::end() ?>
 
 <?php TemplateSet::display($_SERVER['DOCUMENT_ROOT'].'/template.php'); ?>
-
-
-

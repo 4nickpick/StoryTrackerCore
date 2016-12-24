@@ -102,4 +102,3 @@ if(!function_exists('pdologged_exec'))
 	}
 }
 
-?>

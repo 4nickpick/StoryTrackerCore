@@ -170,4 +170,3 @@ class Tab
 		return $this->name;
 	}
 }
-?>

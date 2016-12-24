@@ -493,4 +493,3 @@ class PictureFile extends Tobject
 		}
 	}
 }
-?>

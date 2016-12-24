@@ -25,4 +25,3 @@ class Format
 		return true;
 	}
 }
-?>

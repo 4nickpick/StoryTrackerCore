@@ -250,5 +250,3 @@ if(!function_exists('relativeTime'))
 		return $relative;
 	}
 }
-
-?>
