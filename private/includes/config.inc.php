@@ -109,8 +109,8 @@ if (isset($_GET['logout'])) {
     unset($_SESSION['tabmin_users_id']);
     unset($_SESSION['done']);
     unset($_SESSION['tabmin_developer']);
-    AlertSet::addSuccess('You have been logged out');
-    header('Location: /feedback');
+    AlertSet::addSuccess('You have successfully logged out.');
+    header('Location: /');
     exit();
 }
 
