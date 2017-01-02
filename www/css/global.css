@@ -108,20 +108,16 @@ hr {
 
 
 .header {
-	height: 25px;
 	width: 100%;
 	position: fixed;
 	top: 0;
 	left: 0;
-	background-color: #F1F1D4;
+	background-color: #AE9E7B;
 	z-index: 1000;
 }
 
 .nav {
 	border-bottom:1px solid black;
-	
-	/*header height - top and bottom border sizes*/
-	height: 25px;
 	
 	background-color: #DBC07B;
 
@@ -193,13 +189,14 @@ hr {
 }
 
 .top-center-menu span.current-story-label {
-    font-size: 10px;
+    font-size: 14px;
 }
 
 .top-center-menu select {
     max-width: 150px;
     text-align: left;
     font-size: 12px;
+    color: black;
 }
 
 .top-center-menu select option {
@@ -223,7 +220,6 @@ hr {
 .bottom-center-menu {
     width: 70%;
     margin: 0 auto;
-    float:left;
     text-align: center;
 }
 
@@ -300,7 +296,7 @@ hr {
 
 .wrapper {
     /* header/footer height */
-	margin: 50px auto;
+	margin: 65px auto;
 	width: 83%;
     height: 100%;
 }
@@ -694,4 +690,8 @@ ul#benefits li.green {
 
 .pure-button.button-secondary {
     background: rgb(66, 184, 221); /* this is a light blue */
+}
+
+.pure-g {
+    letter-spacing: 0;
 }
