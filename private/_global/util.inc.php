@@ -51,7 +51,11 @@ if(!function_exists('htmlentities_deep'))
 
 if(!function_exists('randString'))
 {
-	function randString($length)
+    /**
+     * @param int $length
+     * @return string
+     */
+    function randString($length)
 	{
 		$string='';
 		for ($i=0; $i<$length; $i++)

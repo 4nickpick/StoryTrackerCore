@@ -4,10 +4,8 @@ global $currentUser, $currentStory, $modules;
 
 $is_dev = getenv('DEV_ENV') == 'nick-local';
 
-error_reporting(E_ERROR /*| E_WARNING | E_PARSE*/);
+error_reporting(E_ERROR /*| E_WARNING */| E_PARSE);
 ini_set('display_errors', $is_dev);
-
-define('LOGGED_IN_HOME', '../stories/list/');
 
 session_start();
 
@@ -37,6 +35,8 @@ foreach ($config_xml->class as $class) {
     require_once(CLASS_ROOT . $class['file']);
 }
 define('TABMIN', (preg_match('/^\/tabmin\//', $_SERVER['PHP_SELF']) != 0));
+
+define('LOGGED_IN_HOME', CURRENT_DOMAIN.'/stories/list/');
 
 require_once GLOBAL_ROOT . 'classes/ErrorSet.inc.php';
 require_once GLOBAL_ROOT . 'classes/Tabmin.inc.php';

@@ -554,7 +554,6 @@ function getUrlVars() {
 
 function goTo(url, _blank)
 {
-    console.log(_blank);
     var _blank_option = "_self";
     if( !!_blank )
         _blank_option = '_blank';

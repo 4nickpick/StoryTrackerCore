@@ -20,12 +20,15 @@
                 function submitForm_<?php echo $form_id ?>() {
                     var form = document.getElementById("signup_form_<?php echo $form_id ?>");
                     return handleAjaxForm(form,
-                        function(){
+                        function(resp){
+                            AlertSet.addJSON(resp).show();
                             goTo('/confirm');
+                            console.log('success processing form <?php echo $form_id ?>');
                         },
                         function(resp) {
                             AlertSet.addJSON(resp).show();
                             grecaptcha.reset();
+                            console.log('failed processing form <?php echo $form_id ?>');
                         }
                     );
                 }

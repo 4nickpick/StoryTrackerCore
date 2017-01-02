@@ -71,7 +71,7 @@ if(!function_exists('pdologged_preparedQuery'))
 			Console::add('Error SQL: '. $sql);
 			return false;
 		}						
-		trigger_error('Programmers do not know what happend, but it is bad.', E_USER_ERROR);
+		trigger_error('Programmers do not know what happened, but it is bad.', E_USER_ERROR);
 		Console::add('Error SQL: '. $sql);
 		return false;
 	}
