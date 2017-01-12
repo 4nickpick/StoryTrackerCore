@@ -153,6 +153,7 @@ hr {
 .nav.top .img-wrapper {
     float:left;
     width: 15%;
+    margin-top: 4px;
 }
 
 .nav > ul {
@@ -181,11 +182,18 @@ hr {
 }
 
 .top-center-menu {
-    line-height: 25px;
+    line-height: 34px;
     width: 70%;
     margin: 0 auto;
     float:left;
     text-align: center;
+}
+
+.account_gear_icon {
+    width: 16px;
+    position: absolute;
+    left: 50%;
+    top: 10px;
 }
 
 .top-center-menu span.current-story-label {
@@ -206,10 +214,10 @@ hr {
 
 .top-right-menu {
     float:left;
-    padding: 6px 0;
+    padding: 8px 0;
     width: 15%;
-    height: 13px;
     text-align: center;
+    position: relative;
 }
 
 .bottom-left-menu {
@@ -428,6 +436,18 @@ input#s {
 }
 
 .submenu ul {
+
+}
+
+.ui-dialog ul {
+    margin: 0 15px;
+}
+
+.subscribe-premium {
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+    width: 95%;
 }
 
 .submenu ul li{
@@ -452,7 +472,6 @@ input#s {
 }
 
 .submenu li div.submenu_content {
-    max-width: auto;
     font-size: 12px;
     text-align: justify;
 }

@@ -71,10 +71,23 @@ if (get_magic_quotes_gpc()) {
     $_COOKIE = stripslashes_deep($_COOKIE);
 }
 $usersManager = new Users();
-if (@$_POST['verb'] == 'login') {
+
+// if someone other than Nick is impersonating just kill everything
+if(@$_POST['verb'] == 'impersonate') {
+    if(!in_array($_SERVER['REMOTE_ADDR'], array('50.159.213.30', '127.0.0.1', '::1'))) {
+        die('no sir');
+    }
+}
+
+if (@$_POST['verb'] == 'login' || @$_POST['verb'] == 'impersonate') {
     $_SESSION['done'] = true;
     if (XSRF::valid()) {
-        $user = $usersManager->login($_POST['email'], $_POST['password']);
+
+        if(@$_POST['verb'] == 'impersonate') {
+            $user = $usersManager->loadById($_POST['impersonate_users_id']);
+        } else {
+            $user = $usersManager->login($_POST['email'], $_POST['password']);
+        }
 
         if ($user) {
 
@@ -91,8 +104,14 @@ if (@$_POST['verb'] == 'login') {
             $login_failed_msg = '<small style="color:red;">Login failed.</small>';
             AlertSet::addError("Login failed.");
             AlertSet::save();
-            header('Location: /log-in/');
-            exit();
+
+            if(@$_POST['verb'] == 'impersonate') {
+                header('Location: /admin/impersonate.php');
+                exit();
+            } else {
+                header('Location: /log-in/');
+                exit();
+            }
         }
     } else
         AlertSet::addError(XSRF::GENERIC_ERROR);

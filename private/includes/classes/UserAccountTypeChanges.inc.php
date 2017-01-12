@@ -13,16 +13,31 @@ class UserAccountTypeChanges extends Tobjects
     }
 }
 
+class UserAccountTypes
+{
+    const LIMITED_UNPAID = 'LIMITED_UNPAID';
+    const FULL_PAID = 'FULL_PAID';
+    const LIFETIME_MEMBER = 'LIFETIME_MEMBER';
+
+    public static function load($account_type) {
+
+        switch ($account_type) {
+            case UserAccountTypes::LIMITED_UNPAID:
+            case UserAccountTypes::FULL_PAID:
+            case UserAccountTypes::LIFETIME_MEMBER:
+                return $account_type;
+            default:
+                return UserAccountTypes::LIMITED_UNPAID;
+        }
+    }
+}
+
 class UserAccountTypeChange extends Tobject
 {
     protected $id;
     protected $user;
     protected $account_type;
     protected $notes;
-
-    const LIMITED_UNPAID = 'LIMITED_UNPAID';
-    const FULL_PAID = 'FULL_PAID';
-    const LIFETIME_MEMBER = 'LIFETIME_MEMBER';
 
     function __construct($properties=NULL)
     {

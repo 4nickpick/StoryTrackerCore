@@ -552,18 +552,6 @@ function getUrlVars() {
     return vars;
 }
 
-function goTo(url, _blank)
-{
-    var _blank_option = "_self";
-    if( !!_blank )
-        _blank_option = '_blank';
-
-    window.open(
-        url,
-        _blank_option
-    );
-}
-
 function partial(func /*, 0..n args */) {
     var args = Array.prototype.slice.call(arguments, 1);
     return function() {

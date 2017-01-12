@@ -46,6 +46,10 @@ if(!function_exists('pdologged_preparedQuery'))
 				{
 					foreach($params as $key=>&$value)
 					{
+                        // ffs
+					    if(is_bool($value)) {
+					        $value = intval($value);
+                        }
 						
 						if (is_int($value))
 							$rs->bindParam($key, $value, PDO::PARAM_INT);

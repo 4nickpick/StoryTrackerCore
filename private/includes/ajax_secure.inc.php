@@ -12,4 +12,3 @@ else if(!empty($tab) && !$currentUser->tabPermission($module, $tab))
 	echo 'You do not have permission to view this page.';
 	exit();
 }
-?>

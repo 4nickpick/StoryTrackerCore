@@ -98,3 +98,4 @@ var onclose = function() {
 };
 
 loadQuickForm("#bug-report" , bugReportButtons, onclose);
+loadQuickForm("#premium" , {}, onclose);
