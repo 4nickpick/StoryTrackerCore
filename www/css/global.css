@@ -415,7 +415,7 @@ input#s {
 .submenu {
     display: none;
     position: absolute;
-    top: 52px;
+    top: 60px;
     background-color: rgba(0, 0, 0, .8);
     color: white;
 
