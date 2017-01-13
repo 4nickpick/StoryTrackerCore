@@ -98,7 +98,7 @@ class Pictures extends Tobjects
 			LEFT JOIN pictures_to_plot_events ON pictures.id = pictures_to_plot_events.pictures_id
 			'.$where.'
 			GROUP BY pictures.id
-			'.$order_by.'';
+			'.$order_by;
 
         $this->found_rows=0;
 		if($rs = pdologged_preparedQuery($sql, $values))
