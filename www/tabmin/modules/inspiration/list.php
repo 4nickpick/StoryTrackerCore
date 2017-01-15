@@ -1,4 +1,1 @@
-<?php
-
-header('Location: /photos/list/');
-exit();
+<?phpheader('Location: /photos/list/');exit();

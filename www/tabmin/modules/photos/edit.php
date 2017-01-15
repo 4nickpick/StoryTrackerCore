@@ -1,6 +1,7 @@
 <?php
 include($_SERVER['DOCUMENT_ROOT'].'/../private/includes/config.inc.php');
 include INCLUDE_ROOT.'/ajax_secure.inc.php';
+include INCLUDE_ROOT.'/locked_story_secure.inc.php';
 
 $verb='edit';
 if(!empty($_GET['photos_id']))

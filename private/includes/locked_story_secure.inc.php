@@ -9,6 +9,8 @@ if(!empty($currentUser)) {
 }
 
 if($hitPayWallStoryLocked) {
+    $_SESSION['hitPayWall'] = true;
+    $_SESSION['storyIsLocked'] = true;
     if(!empty($module) && !empty($module_name)) {
         header('Location: /' . $module_name . '/list/');
         exit();
