@@ -1,4 +1,1 @@
-<?php
-
-header('Location: /users/profile-edit');
-exit();
+<?phpheader('Location: /users/profile-edit');exit();
